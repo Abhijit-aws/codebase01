@@ -1,5 +1,5 @@
 name: workflow01
-on: workflow_dispatch
+on: [push,workflow_dispatch]
 jobs:  
   first-job:
     runs-on: ubuntu-latest
@@ -8,3 +8,9 @@ jobs:
         run: echo "This is greeting statement"
       - name: This is Exit step
         run: echo "This is Exit"
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: This second job
+        run: echo " this is starting of 2.1"
+      
